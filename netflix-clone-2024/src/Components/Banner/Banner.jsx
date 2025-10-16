@@ -14,6 +14,7 @@ function Banner() {
         const validMovies = request.data.results.filter(m => m.backdrop_path);
         const randomMovie =
           validMovies[Math.floor(Math.random() * validMovies.length)];
+          console.log(request);
         console.log("Selected movie:", randomMovie);
         setMovie(randomMovie);
       } catch (error) {
