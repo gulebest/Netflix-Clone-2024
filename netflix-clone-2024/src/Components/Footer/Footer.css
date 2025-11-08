@@ -3,25 +3,36 @@
     color: grey;
     display: flex;
     justify-content: center;
+    padding: 20px 0;
 }
 
 .footer_inner_container {
     width: 60%;
-    /*background-color: red;*/
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    /* default stacked on small screens */
+    align-items: center;
 }
 
 .footer_icons {
-    /*background-color: blue;*/
     width: 12%;
     display: flex;
     justify-content: space-between;
-    margin-left: 10px;
+    margin: 10px 0;
     color: #fff;
+    min-width: 150px;
 }
 
 .footer_data {
     display: flex;
     justify-content: space-between;
+    flex: 1;
+    margin: 20px 0 0 0;
+    width: 100%;
+    flex-wrap: wrap;
+    /* wrap columns on smaller screens */
+    gap: 20px;
 }
 
 .footer_data ul {
@@ -30,26 +41,93 @@
     flex-direction: column;
     justify-content: space-around;
     height: 10vh;
-    /*background-color: blue;*/
+    padding: 0;
+    margin: 0;
+    min-width: 140px;
 }
 
 .footer_data ul li {
     cursor: pointer;
     margin: 10px 0;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer_data ul li:hover {
+    color: #fff;
 }
 
 .service_code {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: #fff 1px solid;
+    border: 1px solid #fff;
     width: 15%;
-    margin-top: 55px;
+    margin: 40px 0 20px 0;
     cursor: pointer;
+    padding: 10px 0;
+    font-weight: 500;
+    min-width: 150px;
 }
 
 .copy_write {
     font-size: 12px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    text-align: center;
+    color: grey;
+    width: 100%;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 900px) {
+    .footer_inner_container {
+        width: 90%;
+    }
+    .footer_icons {
+        width: 30%;
+        min-width: unset;
+    }
+    .footer_data {
+        flex-direction: column;
+        margin: 10px 0 0 0;
+        gap: 15px;
+    }
+    .footer_data ul {
+        height: auto;
+    }
+    .service_code {
+        width: 40%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer_outer_container {
+        padding: 15px 10px;
+    }
+    .footer_inner_container {
+        width: 100%;
+    }
+    .footer_icons {
+        width: 50%;
+        margin: 10px auto;
+    }
+    .footer_data {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer_data ul {
+        min-width: 100%;
+        height: auto;
+    }
+    .service_code {
+        width: 60%;
+        margin: 30px auto 15px auto;
+    }
+    .copy_write {
+        font-size: 11px;
+        margin: 15px auto;
+    }
 }
