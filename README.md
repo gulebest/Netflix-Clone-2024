@@ -12,11 +12,11 @@ This Netflix-clone is a responsive React web application that mimics the core fe
 - Modular, reusable React components  
 - API integration for real-time movie and show data  
 - Clean and intuitive UI
-
+  
 ## Technologies Used
 
 - React (Functional Components & Hooks)  
 - JavaScript (ES6+)  
 - CSS Modules  
 - External Movie API (e.g., TMDB)  
- - React Router.
+ - React Router
